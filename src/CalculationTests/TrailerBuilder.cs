@@ -13,20 +13,20 @@ namespace CalculationTests
             {
                 new Axle
                 {
-                    AxleType = AxleType.FrontAxle,
+                    AsType = AsType.VoorAs,
                     Id = 1,
                     SequenceNumber = 1,
                     Size = 10,
-                    Distance = 100,
+                    Afstand = 100,
                     WheelBaseFactor = 1
                 },
                 new Axle
                 {
-                    AxleType = AxleType.RearAxle,
+                    AsType = AsType.AchterAs,
                     Id = 2,
                     SequenceNumber = 2,
                     Size = 10,
-                    Distance = 3000,
+                    Afstand = 3000,
                     WheelBaseFactor = 1
                 }
             };

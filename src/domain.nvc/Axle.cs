@@ -6,22 +6,22 @@ namespace domain.nvc
     public class Axle
     {
         public int Id { get; set; }
-        public AxleType AxleType { get; set; }
-        public decimal Distance { get; set; }
+        public AsType AsType { get; set; }
+        public decimal Afstand { get; set; }
         public decimal Size { get; set; }
         public int SequenceNumber { get; set; }
         public decimal WheelBaseFactor { get; set; }
-        public AxleProperties AxleProperties { get; set; }
+        public AsEigenschappen AsEigenschappen { get; set; }
     }
 
     [Flags()]
-    public enum AxleProperties
+    public enum AsEigenschappen
     {
-        Liftable = 1, Lifted =2
+        Optrekbaar = 1, Opgetrokken =2
     }
 
-    public enum AxleType
+    public enum AsType
     {
-        FrontAxle = 1, RearAxle= 2
+        VoorAs = 1, AchterAs = 2
     }
 }

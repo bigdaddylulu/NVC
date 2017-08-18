@@ -21,9 +21,9 @@ namespace CalculationTests
         public void Test6x2()
         {
             Trailer trailer = _trailerBuilder.buildStandaardTrailer();
-            Truck truck = _truckBuilder.build6x2();
+            Truck truck = _truckBuilder.build6x4();
             _sut = new CalculatorTrekkerEnStandaardOplegger(truck, trailer);
-            var result = _sut.calculate();
+            decimal result = _sut.calculate(true, 10000);
             
             Assert.Equal(100,result);
         }

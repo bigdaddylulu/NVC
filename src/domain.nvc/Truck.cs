@@ -9,20 +9,28 @@ namespace domain.nvc
             VehicleGroup = VehicleGroup.Trekker;
         }
 
+
         public decimal AddFrontLoad { get; set; }
         public decimal AddRearLoad { get; set; }
-        public decimal CalcKD_B1 { get; set; }
-        public decimal CalcKD_B2 { get; set; }
-        public decimal CalcV0 { get; set; }
-        public decimal CalcWB { get; set; }
+        public decimal CalcKdB1 { get; set; }
+        public decimal CalcKdB2 { get; set; }
+        public decimal CalcTruckVooroverbouw { get; set; }
+        public decimal WielBasis { get; set; }
         public int FifthWheelObjectNr { get; set; }
-        public decimal FrontAxLoadEmpty { get; set; }
-        public decimal FrontAxLoadLoaded { get; set; }
         public ICollection<LoadMass> LoadMasses { get; set; }
-        public decimal RearAxLoadEmpty { get; set; }
-        public decimal RearAxLoadLoaded { get; set; }
-        public decimal VehicleType { get; set; }
-        public decimal VO { get; set; }
-        public decimal VZHK { get; set; }
+        public decimal AchterAsBelastingLeeg { get; set; }
+        public decimal AchterAsBelastingBeladen { get; set; }
+        public decimal VoorOverbouw { get; set; }
+        public decimal VoorZijdeHartKoppel { get; set; }
+        public decimal VoorAsLeeg { get; set; }
+        public decimal VoorAsBeladen { get; set; }
+        /// <summary>
+        /// Berekende VO1
+        /// </summary>
+        public decimal ZwaartePuntVoorAssen { get; set; }
+
+        public decimal Kdb1 { get; set; }
+        public decimal Kdb2 { get; set; }
+        public decimal Kdb3 { get; set; }
     }
 }

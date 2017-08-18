@@ -13,20 +13,20 @@ namespace nvc.tests.unit
             {
                 new Axle
                 {
-                    AxleType = AxleType.FrontAxle,
+                    AsType = AsType.VoorAs,
                     Id = 1,
                     SequenceNumber = 1,
                     Size = 10,
-                    Distance = 100,
+                    Afstand = 100,
                     WheelBaseFactor = 1
                 },
                 new Axle
                 {
-                    AxleType = AxleType.RearAxle,
+                    AsType = AsType.AchterAs,
                     Id = 2,
                     SequenceNumber = 2,
                     Size = 10,
-                    Distance = 3000,
+                    Afstand = 3000,
                     WheelBaseFactor = 1
                 }
             };
@@ -43,33 +43,35 @@ namespace nvc.tests.unit
             {
                 new Axle
                 {
-                    AxleType = AxleType.FrontAxle,
+                    AsType = AsType.VoorAs,
                     Id = 1,
                     SequenceNumber = 1,
                     Size = 10,
-                    Distance = 100,
+                    Afstand = 100,
                     WheelBaseFactor = 1
                 },
                 new Axle
                 {
-                    AxleType = AxleType.RearAxle,
+                    AsType = AsType.AchterAs,
                     Id = 2,
                     SequenceNumber = 2,
                     Size = 10,
-                    Distance = 3000,
+                    Afstand = 2800,
                     WheelBaseFactor = 1
                 },
                 new Axle
                 {
-                    AxleType = AxleType.RearAxle,
+                    AsType = AsType.AchterAs,
                     Id = 3,
                     SequenceNumber = 3,
                     Size = 10,
-                    Distance = 500,
+                    Afstand = 1400,
                     WheelBaseFactor = (decimal) (7.5 / 19)
                 }
             };
-
+            T.VoorZijdeHartKoppel = 4500;
+            T.AchterAsBelastingBeladen = 19000;
+            T.AchterAsBelastingLeeg = 3000;
             T.Axles = lst;
             return T;
         }
@@ -77,34 +79,41 @@ namespace nvc.tests.unit
         public Truck build6x4()
         {
             var T = new Truck();
+            T.Name = "TR3";
+            T.VoorOverbouw = 1420;
+            T.VoorZijdeHartKoppel = 5000;
+            T.AchterAsBelastingBeladen = 19000;
+            T.AchterAsBelastingLeeg = 3000;
+            T.VoorAsLeeg = 5500;
+            T.VoorAsBeladen = 8500;
 
             var lst = new List<Axle>
             {
                 new Axle
                 {
-                    AxleType = AxleType.FrontAxle,
+                    AsType = AsType.VoorAs,
                     Id = 1,
                     SequenceNumber = 1,
                     Size = 10,
-                    Distance = 100,
+                    Afstand = T.VoorOverbouw,
                     WheelBaseFactor = 1
                 },
                 new Axle
                 {
-                    AxleType = AxleType.RearAxle,
+                    AsType = AsType.AchterAs,
                     Id = 2,
                     SequenceNumber = 2,
                     Size = 10,
-                    Distance = 3000,
+                    Afstand = 3200,
                     WheelBaseFactor = 1
                 },
                 new Axle
                 {
-                    AxleType = AxleType.RearAxle,
+                    AsType = AsType.AchterAs,
                     Id = 3,
                     SequenceNumber = 3,
                     Size = 10,
-                    Distance = 500,
+                    Afstand = 1360,
                     WheelBaseFactor = (decimal) 0.5
                 }
             };
@@ -121,29 +130,29 @@ namespace nvc.tests.unit
             {
                 new Axle
                 {
-                    AxleType = AxleType.FrontAxle,
+                    AsType = AsType.VoorAs,
                     Id = 1,
                     SequenceNumber = 1,
                     Size = 10,
-                    Distance = 100,
+                    Afstand = 100,
                     WheelBaseFactor = 1
                 },
                 new Axle
                 {
-                    AxleType = AxleType.RearAxle,
+                    AsType = AsType.AchterAs,
                     Id = 2,
                     SequenceNumber = 2,
                     Size = 10,
-                    Distance = 3000,
+                    Afstand = 3000,
                     WheelBaseFactor = 1
                 },
                 new Axle
                 {
-                    AxleType = AxleType.RearAxle,
+                    AsType = AsType.AchterAs,
                     Id = 3,
                     SequenceNumber = 4,
                     Size = 10,
-                    Distance = 500,
+                    Afstand = 500,
                     WheelBaseFactor = (decimal) (11.5 / 19)
                 }
             };
@@ -160,29 +169,29 @@ namespace nvc.tests.unit
             {
                 new Axle
                 {
-                    AxleType = AxleType.FrontAxle,
+                    AsType = AsType.VoorAs,
                     Id = 1,
                     SequenceNumber = 1,
                     Size = 10,
-                    Distance = 100,
+                    Afstand = 100,
                     WheelBaseFactor = 1
                 },
                 new Axle
                 {
-                    AxleType = AxleType.FrontAxle,
+                    AsType = AsType.VoorAs,
                     Id = 2,
                     SequenceNumber = 2,
                     Size = 10,
-                    Distance = 500,
+                    Afstand = 500,
                     WheelBaseFactor = 1
                 },
                 new Axle
                 {
-                    AxleType = AxleType.RearAxle,
+                    AsType = AsType.AchterAs,
                     Id = 3,
                     SequenceNumber = 4,
                     Size = 10,
-                    Distance = 3000,
+                    Afstand = 3000,
                     WheelBaseFactor = (decimal) (11.5 / 19)
                 }
             };
@@ -199,38 +208,38 @@ namespace nvc.tests.unit
             {
                 new Axle
                 {
-                    AxleType = AxleType.FrontAxle,
+                    AsType = AsType.VoorAs,
                     Id = 1,
                     SequenceNumber = 1,
                     Size = 10,
-                    Distance = 100,
+                    Afstand = 100,
                     WheelBaseFactor = 1
                 },
                 new Axle
                 {
-                    AxleType = AxleType.RearAxle,
+                    AsType = AsType.AchterAs,
                     Id = 2,
                     SequenceNumber = 2,
                     Size = 10,
-                    Distance = 3000,
+                    Afstand = 3000,
                     WheelBaseFactor = 1
                 },
                 new Axle
                 {
-                    AxleType = AxleType.RearAxle,
+                    AsType = AsType.AchterAs,
                     Id = 3,
                     SequenceNumber = 3,
                     Size = 10,
-                    Distance = 500,
+                    Afstand = 500,
                     WheelBaseFactor = (decimal) (3.0 / 4.0)
                 },
                 new Axle
                 {
-                    AxleType = AxleType.RearAxle,
+                    AsType = AsType.AchterAs,
                     Id = 3,
                     SequenceNumber = 4,
                     Size = 10,
-                    Distance = 500,
+                    Afstand = 500,
                     WheelBaseFactor = (decimal) (3.0 / 8.0)
                 }
             };
@@ -247,38 +256,38 @@ namespace nvc.tests.unit
             {
                 new Axle
                 {
-                    AxleType = AxleType.FrontAxle,
+                    AsType = AsType.VoorAs,
                     Id = 1,
                     SequenceNumber = 1,
                     Size = 10,
-                    Distance = 100,
+                    Afstand = 100,
                     WheelBaseFactor = 1
                 },
                 new Axle
                 {
-                    AxleType = AxleType.RearAxle,
+                    AsType = AsType.AchterAs,
                     Id = 2,
                     SequenceNumber = 2,
                     Size = 10,
-                    Distance = 3000,
+                    Afstand = 3000,
                     WheelBaseFactor = 1
                 },
                 new Axle
                 {
-                    AxleType = AxleType.RearAxle,
+                    AsType = AsType.AchterAs,
                     Id = 3,
                     SequenceNumber = 3,
                     Size = 10,
-                    Distance = 500,
+                    Afstand = 500,
                     WheelBaseFactor = (decimal) (3.0 / 4.0)
                 },
                 new Axle
                 {
-                    AxleType = AxleType.RearAxle,
+                    AsType = AsType.AchterAs,
                     Id = 3,
                     SequenceNumber = 4,
                     Size = 10,
-                    Distance = 500,
+                    Afstand = 500,
                     WheelBaseFactor = (decimal) (3.0 / 8.0)
                 }
             };
@@ -295,38 +304,38 @@ namespace nvc.tests.unit
             {
                 new Axle
                 {
-                    AxleType = AxleType.FrontAxle,
+                    AsType = AsType.VoorAs,
                     Id = 1,
                     SequenceNumber = 1,
                     Size = 10,
-                    Distance = 100,
+                    Afstand = 100,
                     WheelBaseFactor = 1
                 },
                 new Axle
                 {
-                    AxleType = AxleType.FrontAxle,
+                    AsType = AsType.VoorAs,
                     Id = 2,
                     SequenceNumber = 2,
                     Size = 10,
-                    Distance = 500,
+                    Afstand = 500,
                     WheelBaseFactor = (decimal) 0.5
                 },
                 new Axle
                 {
-                    AxleType = AxleType.RearAxle,
+                    AsType = AsType.AchterAs,
                     Id = 3,
                     SequenceNumber = 3,
                     Size = 10,
-                    Distance = 3000,
+                    Afstand = 3000,
                     WheelBaseFactor = (decimal) (3.0 / 4.0)
                 },
                 new Axle
                 {
-                    AxleType = AxleType.RearAxle,
+                    AsType = AsType.AchterAs,
                     Id = 3,
                     SequenceNumber = 4,
                     Size = 10,
-                    Distance = 500,
+                    Afstand = 500,
                     WheelBaseFactor = (decimal) (3.0 / 8.0)
                 }
             };
@@ -343,38 +352,38 @@ namespace nvc.tests.unit
             {
                 new Axle
                 {
-                    AxleType = AxleType.FrontAxle,
+                    AsType = AsType.VoorAs,
                     Id = 1,
                     SequenceNumber = 1,
                     Size = 10,
-                    Distance = 100,
+                    Afstand = 100,
                     WheelBaseFactor = 1
                 },
                 new Axle
                 {
-                    AxleType = AxleType.FrontAxle,
+                    AsType = AsType.VoorAs,
                     Id = 2,
                     SequenceNumber = 2,
                     Size = 10,
-                    Distance = 500,
+                    Afstand = 500,
                     WheelBaseFactor = (decimal) 0.5
                 },
                 new Axle
                 {
-                    AxleType = AxleType.RearAxle,
+                    AsType = AsType.AchterAs,
                     Id = 3,
                     SequenceNumber = 3,
                     Size = 10,
-                    Distance = 3000,
+                    Afstand = 3000,
                     WheelBaseFactor = (decimal) (3.0 / 4.0)
                 },
                 new Axle
                 {
-                    AxleType = AxleType.RearAxle,
+                    AsType = AsType.AchterAs,
                     Id = 3,
                     SequenceNumber = 4,
                     Size = 10,
-                    Distance = 500,
+                    Afstand = 500,
                     WheelBaseFactor = (decimal) (3.0 / 8.0)
                 }
             };
